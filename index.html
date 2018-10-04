@@ -1,16 +1,57 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Employee Directory</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Anton|Chakra+Petch" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"/>
+     <title>Company Directory</title>
 </head>
 
-<body>
-  <script src="dom.js"></script>
-  <script src="employeeList.js"></script>
+<body class="full h-100">
+    <div class="container-fluid h-100">
+        <div class="row h-100">
+            <div class="col-md-2 sidebar">
+                <div>
+                <i class="far fa-address-book align-content-center"><a href="index.html" alt="homepage"></a></i>
+                </div>
+                <ul>
+                    <li id="view">view</li>
+                    <li id="add">add</li>
+                    <li id="verify">verify</li>
+                    <li id="update">update</li>
+                    <li id="delete">delete</li>
+                </ul>
+            </div>
+            <div class="col-md-10" id="content" >
+                <form>
+                    <div class="wrap">
+                        <input id="empName" placeholder="employee name" />
+                        <div class="extra-inputs">
+                            <input id="empOffice" placeholder="office number" />
+                            <input id="empPhone" placeholder="phone number" />
+                        </div>
+                        <button id="submit">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </form>
+                <div id="directory"></div>
+                
+            </div>
+        </div>
+    </div>
+    <script src="dom.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js" integrity="sha384-kW+oWsYx3YpxvjtZjFXqazFpA7UP/MbiY4jvs+RWZo2+N94PFZ36T6TFkc9O3qoB" crossorigin="anonymous"></script>
+    <script src="employeeList.js"></script>
+    <script src="app.js"></script>
 </body>
 
 </html>

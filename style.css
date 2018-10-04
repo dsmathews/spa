@@ -1,0 +1,50 @@
+.full {
+    height: 100% !important;
+}
+.container-fluid{
+    height: 100%;
+}
+
+sidebar {
+    background-color: black;
+    height: 100%;
+}
+
+li {
+    font-family: 'Anton', sans-serif;
+}
+
+#empName, #empOffice, #empPhone, #id {
+    display: inline !important;
+}
+
+.wrap {
+    display: inline-flex;
+}
+#empName {
+    margin-right: 4px;
+}
+
+button {
+    margin-left: 4px;
+}
+
+#hide {
+    display: none;
+}
+
+#show{
+    display: inline-flex;
+}
+
+#directory {
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+nav {
+    background-color: aqua;
+}
+#content{
+    background-color: lightskyblue;
+
+}
