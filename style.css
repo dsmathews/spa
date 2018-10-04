@@ -42,9 +42,15 @@ button {
 }
 
 nav {
-    background-color: aqua;
+    background-color: black;
+    color: white;
 }
 #content{
-    background-color: lightskyblue;
+    background-color: white;
+    color: black;
+    
 
+}
+.row {
+    min-height: 100vh;
 }

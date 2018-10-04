@@ -47,28 +47,6 @@ const add = function () {
     laser();
 };
 
-// direct the flow from click event
-const flowDirect = function() {
-    console.log("flowDirect");
-    event.preventDefault();
-    switch (direct) {
-        case 'add':
-            add ();
-            break;
-        case 'verify':
-            vrfy();
-            break;
-        case 'update':
-            updt();
-            break;
-        case 'delete':
-            remove();
-            break;
-    }
-};
-
-
-
 
 // VERIFY FUNCTION
 const setVfy = function() {
@@ -85,17 +63,23 @@ const vrfy = function() {
     for (let i = 0; i < employeeList.length; i++){
         if (employeeList[i].name === mployName) {
             htmlStrng = 'yes';
-            return;
-            
+        }
+        else{
+            render(htmlStrng);
         }
     }
-    console.log(verified);
+    console.log("verified");
     render(htmlStrng);
 };
+
+
 
 // UPDATE FUNCTION
 const setUp = function() {
     $("#directory").empty();
+    $("#empName").empty();
+    $("#empOffice").empty();
+    $("#empPhone").empty();
     direct = 'updt';
     $("form").show();
     $('.extra-inputs').show();
@@ -111,11 +95,10 @@ const updt = function() {
         if (employeeList[i].name === mployName) {
             employeeList[i].officeNum = mployOffice;
             employeeList[i].phoneNum = mployPhone;
-    
         }
     }
     console.log("clicky");
-    laser();
+    render();
 };
 
 // DELETE
@@ -134,9 +117,30 @@ const remove = function() {
     for (let i = 0; i < employeeList.length; i++){
         if (employeeList[i].name === mployName) {
             employeeList.splice(i, 1);
+            $("#empName").empty;
         }
-        return;
+        laser();
 }
+};
+
+// direct the flow from click event
+const flowDirect = function() {
+    event.preventDefault();
+    switch (direct) {
+        case 'add':
+            add ();
+            break;
+        case 'vrfy':
+            vrfy();
+            break;
+        case 'updt':
+            updt();
+            break;
+        case 'remove':
+            remove();
+            break;
+    }
+    console.log("switch");
 };
 
 
