@@ -1,5 +1,5 @@
 // initial command to start app
-let direct = "";
+let direct = '';
 
 // function to allow content to be generated in a div with the class of entry. This content changes the html with interpolated data and three <p> tags. A variable called htmlStrng creates an empty string for use with created content.
 const laser = function() {
@@ -84,7 +84,7 @@ const setUp = function() {
     $("form").show();
     $('.extra-inputs').show();
     console.log("this is a setup");
-}
+};
 
 
 const updt = function() {
@@ -117,7 +117,7 @@ const remove = function() {
     for (let i = 0; i < employeeList.length; i++){
         if (employeeList[i].name === mployName) {
             employeeList.splice(i, 1);
-            $("#empName").empty;
+            $("#empName").empty();
         }
         laser();
 }
